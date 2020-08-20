@@ -1,0 +1,68 @@
+Firewall - State - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+(type of it, firewall enabled of it) of profiles of local policy of firewall
+
+
+Firewall - Current Profiles - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+profile types of firewall
+
+
+Firewall - Inbound ICMP Echo - Windows
+Period Every Report
+ 	* Results in a true/false
+Show indented relevance
+allow inbound echo request of icmp settings of current profile of local policy of firewall
+
+
+Firewall - Local Modification Allowed - Windows
+Period Every Report
+ 	* Results in a true/false
+Show indented relevance
+local policy modify state of firewall = ok firewall local policy modify state
+
+
+Firewall - Group Policy Overrides Local Policy - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+local policy modify state of firewall = gp override firewall local policy modify state
+
+
+Firewall - All Unsolicited Inbound Traffic Blocked - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+local policy modify state of firewall = inbound blocked firewall local policy modify state
+
+
+Firewall - Authorized Applications - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+(name of it, remote addresses of it, ip version of it, process image file name of it) of authorized applications whose (enabled of it = true) of current profile of local policy of firewall
+
+
+Firewall - Active Inbound Rules - Windows
+Period Every Report
+ 	* Results in a true/false
+Show indented relevance
+(name of it, application name of it, local addresses string of it, local ports string of it, remote addresses string of it, remote ports string of it) of rules whose (currently active of it and inbound of it) of firewall
+
+
+Firewall - Active Outbound Rules - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+(name of it, application name of it, local addresses string of it, local ports string of it, remote addresses string of it, remote ports string of it) of rules whose (currently active of it and outbound of it) of firewall
+
+
+Firewall - Globally Open Ports - Windows
+Period Every Report
+  	* Results in a true/false
+Show indented relevance
+(name of it, port of it, remote addresses of it) of globally open ports whose (enabled of it) of current profile of local policy of firewall
