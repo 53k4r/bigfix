@@ -1,0 +1,18 @@
+Action Script:
+
+delete "{(client folder of current site as string) & "/__appendfile"}"
+appendfile #!/bin/sh
+    appendfile touch /var/opt/besclient_restart.sh
+	appendfile echo "systemctl stop besclient" >> /var/opt/besclient_restart.sh
+	appendfile echo "systemctl start besclient" >> /var/opt/besclient_restart.sh
+	appendfile chmod u+x /var/opt/besclient_restart.sh
+	appendfile echo "30 23 * * * /usr/bin/sh /var/opt/besclient_restart.sh" >> /var/spool/cron/root
+wait chmod +x "{(client folder of current site as string) & "/__appendfile"}"
+run "{(client folder of current site as string) & "/__appendfile"}"
+
+
+Relevance:
+
+name of operating system contains "Linux Red Hat Enterprise Server 7" OR name of operating system contains "Linux CentOS 7" OR name of operating system contains "Linux Oracle Enterprise Server 7"
+
+not exists file "/var/opt/besclient_restart.sh"

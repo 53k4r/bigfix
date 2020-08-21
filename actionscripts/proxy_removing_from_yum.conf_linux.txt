@@ -1,0 +1,14 @@
+Action Script:
+
+#!/bin/sh
+unalias cp
+cp -f /etc/yum.conf /etc/yum.conf.ORIG
+grep -v proxy /etc/yum.conf > /etc/yum.conf.mod
+cp -f /etc/yum.conf.mod /etc/yum.conf
+rm -f /etc/yum.conf.mod
+
+Relevance:
+
+(exists (operating system) whose (it as string as lowercase contains "Linux" as lowercase))
+
+exists file ("/etc/yum.conf") whose (exists line whose (it contains "proxy") of it)

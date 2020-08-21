@@ -1,0 +1,11 @@
+Action Script
+
+action parameter query "username" with description "Please enter the username" with default ""
+action parameter query "password" with description "Please enter the password" with default ""
+waithidden net user {parameter "username" of action} {parameter "password" of action} /add
+waithidden net localgroup administrators {parameter "username" of action} /add
+
+
+Relevance:
+
+name of operating system contains "Win"

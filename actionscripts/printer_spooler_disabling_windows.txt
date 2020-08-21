@@ -1,0 +1,11 @@
+Action Script:
+
+wait cmd.exe /C "REG add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Spooler /V Start /t REG_DWORD /d 4" /f
+wait cmd.exe /C "net stop Spooler"
+
+
+Relevance:
+
+name of operating system contains "Win"
+
+exists running service "Spooler"
