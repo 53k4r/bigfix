@@ -1,0 +1,3 @@
+Relevance:
+
+(display name of it & " (" & service name of it & ") | " & state of it) of services whose (exists display name of it AND (length of (display name of it as string)) > 0 AND (number of substrings " " of (display name of it as string) < (length of (display name of it as string))) AND exists service name of it AND (length of (service name of it as string)) > 0 AND (number of substrings " " of (service name of it as string) < (length of (service name of it as string))) AND exists state of it)
