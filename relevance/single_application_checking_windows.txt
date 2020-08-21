@@ -1,0 +1,3 @@
+Relevance:
+
+exists keys whose (value "DisplayName" of it = "Application Name" and value "DisplayVersion" of it as string as version < version "9") of keys "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall" of (x32 registries;x64 registries)
