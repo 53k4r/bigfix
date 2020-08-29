@@ -1,0 +1,29 @@
+By Using Command:
+
+***********************************************************************************************
+action parameter query "username" with description "Please enter the username" with default ""
+waithidden cmd.exe /C "rd C:\Users\{parameter "username" of action}\AppData\Local\Temp" /s /q
+waithidden cmd.exe /C "md C:\Users\{parameter "username" of action}\AppData\Local\Temp"
+waithidden cmd.exe /C "rd %Windir%\Temp\" /s /q
+waithidden cmd.exe /C "md %Windir%\Temp\"
+
+***********************************************************************************************
+
+
+
+By Using Batch Script:
+
+************************************************************************************************
+action parameter query "username" with description "Please enter the username" with default ""
+action uses wow64 redirection false
+delete __appendfile
+delete temp.bat
+appendfile @ECHO OFF
+appendfile rd "C:\Users\{parameter "username" of action}\AppData\Local\Temp" /s /q
+appendfile md "C:\Users\{parameter "username" of action}\AppData\Local\Temp"
+appendfile rd "%Windir%\Temp\" /s /q
+appendfile md "%Windir%\Temp\"
+move __appendfile temp.bat
+wait cmd.exe /C temp.bat
+
+*****************************************************************************************************

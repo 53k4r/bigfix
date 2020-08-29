@@ -1,0 +1,10 @@
+action parameter query "serverip" with description "Please enter the ntp server ipaddress" with default ""
+action uses wow64 redirection false
+delete __appendfile
+delete ntp.bat
+appendfile @ECHO OFF
+appendfile w32TM /config /syncfromflags:manual /manualpeerlist:{parameter "serverip" of action}
+appendfile w32tm /config /update
+appendfile w32tm /resync
+move __appendfile ntp.bat
+wait cmd.exe /C ntp.bat
